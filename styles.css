@@ -1,0 +1,163 @@
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+.container {
+    margin: 0px 79px;
+}
+.header {
+    background-image: url(bicucle.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hat {
+    background-image: linear-gradient(to bottom, #426151, transparent);
+    background-size: cover;
+    height: 196px;
+}
+.headerline {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.opt-item {
+    color: #E3DED1;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 24px;
+    margin-right: 25px;
+}
+    .opt-item:hover {
+        background-color: #E3DED1;
+        color: #1E1E1E;
+    }
+.aut {
+    margin-left: 500px;
+}
+.aut-button {
+    background-color: darkgoldenrod;
+    text-decoration: none;
+    color: #E3DED1;
+    font-weight: 500;
+    padding: 15px 15px;
+    border-radius: 5px;
+}
+    .aut-button:hover {
+        background-color: orangered;
+    }
+.main {
+    
+    display: grid;
+    padding-top: 312px;
+}
+.front-text {
+    margin-left: 282px;
+    font-size: 52px;
+    color: #426151;
+}
+.small-text {
+    margin-left: 282px;
+    padding-top: 5px;
+    font-weight: 100;
+    font-size: 18px;
+    color: #1E1E1E;
+}
+.section {
+    background-color: #426151;
+    background-size: cover;
+}
+.hills {
+    padding-top: 866px;
+    display: flex;
+    justify-content: stretch;
+}
+.cards {
+    padding-top: 495px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+}
+.card {
+    margin-right: 45px;
+    background-color: #B6CEAE;
+    height: 292px;
+    width: 292px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.borders {
+    border: solid 5px #426151;
+    height: 262px;
+    width: 262px;
+    text-align: center;
+    font-size: 24px;
+    color: #426151;
+}
+.description {
+    display: flex;
+    padding-top: 278px;
+}
+.main-text {
+    color: #E3DED1;
+    font-weight: 100;
+    font-size: 18px;
+    border-left: solid 3px #E3DED1;
+    padding: 39px;
+    margin-left: 39px;
+}
+
+.rectangles {
+    margin: -114px 0px 0px -79px;
+    padding-top: 340px;
+    background-image: url(back.png);
+    background-size: 74.8vw auto;
+    background-repeat: no-repeat;
+}
+.rect{
+    padding-bottom: 97px;
+}
+.card2 {
+    margin: 54px -132px 55px 411px;
+    display: inline-block;
+    position: relative;
+    height: 12.85vw;
+    width: 28.75vw;
+    background-color: #82A585;
+    border: solid 1px #DAE5D7;
+}
+.card2-img{
+    display: inline-block;
+    resize: both; 
+}
+.test-holder {
+    background-color: #DCE7D9;
+    padding-left: 31px;
+    margin-top:-20px;
+}
+.testimonials {
+    border-left: solid 2px #426151;
+    padding-left: 28px;
+}
+h2 {
+    font: bold 30px;
+    color: #426151;
+    margin-left: 48px;
+}
+
+h3 {
+    font: 20px;
+    text-decoration: underline;
+    color: #426151;
+}
+.comment-item {
+    border: solid 2px #426151;
+    padding: 10px;
+    margin-left: 15px;
+}
+.comment-item-text {
+    font: 18px;
+}

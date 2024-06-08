@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Заголовок страницы</title>
+    <link rel="stylesheet" type="text/css" href="autostyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+            <div class="rectangle">
+                <div class="text">Заполните форму</div>
+                <form name="signup">
+                    <input class="button" type="text" id="email" name="email" placeholder="E-mail" />
+                    <input class="button" type="password" id="password" name="password" placeholder="Пароль" />
+                </form>
+                <a class="label1" href="@">Забыли пароль?</a>
+                <div class="rectangle2"></div>
+            </div>
+            <div class="under-rectangle">
+                <a onclick="loginUser()" class="label2" href="@">Войти</a>
+                <a onclick="loginUser()" class="label3" href="@">Регистрация</a>
+                <!--<script type="text/javascript" charset="utf-8">
+        var emailArray = [];
+        function loginUser() {
+            var email = document.getElementById('email').value;
+            emailArray.push(email);
+            alert('You have now stored your email address');
+            console.log(emailArray[0]);
+            return false;
+        }
+    </script>--><script href="C:\Users\Designificator\source\repos\hotweels\Autorisation.js"></script>
+            </div>
+    </div>
+</body>
+</html>

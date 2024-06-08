@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Крути педали</title>
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="hat">
+            <div class="container">
+                <div class="headerline">
+                    <div class="logo">
+                    </div>
+                    <div class="options">
+                        <a class="opt-item" href="@">ГЛАВНАЯ</a>
+                        <a class="opt-item" href="@">МАРШРУТЫ</a>
+                        <a class="opt-item" href="@">ОТЗЫВЫ</a>
+                    </div>
+                    <div class="aut">
+                        <a class="aut-button" href="C:\Users\Designificator\source\repos\hotweels\Autorisation.html">АВТОРИЗАЦИЯ</a>
+                    </div>
+                </div>
+                <div class="main">
+                    <div class="front-text">КРУТИ ПЕДАЛИ</div>
+                    <div class="small-text"></div>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <div class="borders"><b><i>Текст</i></b></div>
+                    </div>
+                    <div class="card">
+                        <div class="borders"><b><i>Текст</i></b></div>
+                    </div>
+                    <div class="card">
+                        <div class="borders"><b><i>Текст</i></b></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hills">
+            <img src="Vector 2.png" width="100%">
+        </div>
+    </header>
+    <section id="section" class="section">
+
+        <div class="container">
+            <div class="description">
+                <img src="pic.png">
+                <div class="main-text">Какой то непонятный текст</div>
+            </div>
+            <div class="rectangles">
+                <div class="rect">
+                    <span class="card2"></span>
+                    <img src="Rectangle.png">
+                </div>
+                <div class="rect">
+                    <span class="card2"></span>
+                    <img src="Rectangle.png">
+                </div>
+                <div class="rect">
+                    <span class="card2"></span>
+                    <img src="Rectangle.png">
+                </div>
+            </div>
+        </div>
+        <div class="test-holder">
+            <h2>Отзывы</h2>
+            <div class="tesimonials"></div>
+            <input type="text" id="comment-item-name">
+            <input type="text" id="comment-item-text">
+            <!-- Submit button  -->
+            <button id="submit">Submit</button>
+
+            <!-- Comments container -->
+            <div id="comment-container">
+
+                <!-- Unordered list for comments -->
+                <div id="comment-list">
+                    <div class="comment-item">
+                        <h3 id="comment-item-name"></h3>
+                        <div class="comment-item-avatar"><img src="0lslz48qa80x7xarnt4ivlvtxnivvpmu.png" width="5vh" height="5vh"></div>
+                        <div class="comment-item-text"></div>
+                    </div>
+                </div>
+
+            </div>
+            <script>
+                const commentItemText = document.getElementById('comment-item-text');
+                const commentItemName = document.getElementById('comment-item-name');
+                const submitBtn = document.getElementById('submit');
+                const commentList = document.getElementById('comment-list');
+
+                // Submit event handler
+                submitBtn.addEventListener('click', function () {
+
+                    // Get input value
+                    const commentText = commentItemText.value;
+                    const commentName = commentItemName.value;
+
+                    // Create comment DOM element
+                    const newCommentItem = document.createElement('div');
+                    const newCommentName = document.createElement('div');
+                    newCommentName.innerText = commentName;
+                    const newCommentText = document.createElement('div');
+                    newCommentText.innerText = commentText;
+                    newCommentItem.insertBefore(newCommentName);
+                    newCommentItem.insertBefore(newCommentText);
+
+                    // Append to list
+                    commentList.insertBefore(newCommentItem);
+
+                    // Clear input
+                    commentItemText.value = '';
+                    commentItemName.value = '';
+                });
+            </script>
+        </div>
+    </section>
+    <footer id="footer" class="footer">
+        <div class="container">
+
+        </div>
+    </footer>
+</body>
+</html>

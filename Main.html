@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -65,62 +65,139 @@
                 </div>
             </div>
         </div>
-        <div class="test-holder">
-            <h2>Отзывы</h2>
-            <div class="tesimonials"></div>
-            <input type="text" id="comment-item-name">
-            <input type="text" id="comment-item-text">
-            <!-- Submit button  -->
-            <button id="submit">Submit</button>
+            
 
             <!-- Comments container -->
-            <div id="comment-container">
+        <div class="comment-container" id="comment-container">
+            <h2>Отзывы</h2>
+            <div class="stars" id="stars">
+        <div class="stars-item" id="star1"><img src="empty_star.png"></div>
+        <div class="stars-item" id="star2"><img src="empty_star.png"></div>
+        <div class="stars-item" id="star3"><img src="empty_star.png"></div>
+        <div class="stars-item" id="star4"><img src="empty_star.png"></div>
+        <div class="stars-item" id="star5"><img src="empty_star.png"></div>
+    </div>
+    <script>
+        const starsArray = new Array(5);
+        
+        for (var i = 0; i < 5; i++) {
+            starsArray[i] = document.getElementById("star" + (i+1).toString());
+            //starsArray[i].addEventListener('click', StarsSelect);
+        }
 
-                <!-- Unordered list for comments -->
-                <div id="comment-list">
-                    <div class="comment-item">
-                        <h3 id="comment-item-name"></h3>
-                        <div class="comment-item-avatar"><img src="0lslz48qa80x7xarnt4ivlvtxnivvpmu.png" width="5vh" height="5vh"></div>
-                        <div class="comment-item-text"></div>
-                    </div>
-                </div>
-
+        function StarsSelect1() {
+            for (var j = 0; j < 1; j++) {
+                starsArray[j].innerHTML = '<img src="star.png">';
+            }
+        }
+        function StarsSelect2() {
+            for (var j = 0; j < 2; j++) {
+                starsArray[j].innerHTML = '<img src="star.png">';
+            }
+        }
+        function StarsSelect3() {
+            for (var j = 0; j < 3; j++) {
+                starsArray[j].innerHTML = '<img src="star.png">';
+            }
+        }
+        function StarsSelect4() {
+            for (var j = 0; j < 4; j++) {
+                starsArray[j].innerHTML = '<img src="star.png">';
+            }
+        }
+        function StarsSelect5() {
+            for (var j = 0; j < 5; j++) {
+                starsArray[j].innerHTML = '<img src="star.png">';
+            }
+        }
+        starsArray[0].addEventListener('click', StarsSelect1);
+        starsArray[1].addEventListener('click', StarsSelect2);
+        starsArray[2].addEventListener('click', StarsSelect3);
+        starsArray[3].addEventListener('click', StarsSelect4);
+        starsArray[4].addEventListener('click', StarsSelect5);
+        function RefreshStars() {
+            for (var i = 0; i < 5; i++) {
+                const star = document.getElementById("star" + (i + 1).toString());
+                star.innerHTML = '<img src="empty_star.png">';
+            }
+        }
+    </script>
+            <div class="comment-form">
+                <input type="text" id="comment-item-name" class="comment-input" placeholder="Имя">
+                <input type="text" id="comment-item-text" class="comment-input" placeholder="Комментарий">
+                <!-- Submit button  -->
+                <button id="submit" class="submit-button">Отправить</button>
             </div>
+            <div class="comment-section">        
+    <!-- Unordered list for comments -->
+            <div class="comment-list" id="comment-list">
+                <!-- Один коммент <div class="comment-item">
+
+            <div class="comment-item-avatar"><img src="0lslz48qa80x7xarnt4ivlvtxnivvpmu.png" width="5vh" height="5vh"></div>
+            <div class="comment-item-inner">
+            <h3 id="comment-item-name"></h3>
+            <div class="comment-item-text"></div>
+            </div>
+        </div>-->
+            </div>
+            <div class="advert"></div>
+            </div>
+        </div>
             <script>
+                const commentItemStars = document.getElementById('stars');
                 const commentItemText = document.getElementById('comment-item-text');
                 const commentItemName = document.getElementById('comment-item-name');
                 const submitBtn = document.getElementById('submit');
                 const commentList = document.getElementById('comment-list');
-
+                let x = 1;
                 // Submit event handler
-                submitBtn.addEventListener('click', function () {
-
+                submitBtn.addEventListener('click', function AddNewCom() {
+                    
                     // Get input value
                     const commentText = commentItemText.value;
                     const commentName = commentItemName.value;
 
                     // Create comment DOM element
                     const newCommentItem = document.createElement('div');
-                    const newCommentName = document.createElement('div');
+                    newCommentItem.className = "comment-item";
+                    const newCommentItemStars = commentItemStars.cloneNode(true);
+                    newCommentItemStars.id = "stars" + x.toString();
+                    const newCommentItemInner = document.createElement('div');
+                    newCommentItemInner.className = "comment-item-inner";
+                    const newCommentName = document.createElement('h3');
                     newCommentName.innerText = commentName;
+                    newCommentName.id = "comment-item-name";
+                    const newCommentItemAva = document.createElement('div');
+                    newCommentItemAva.className = "comment-item-avatar";
+                    newCommentItemAva.innerHTML = '<img src="0lslz48qa80x7xarnt4ivlvtxnivvpmu.png" width="70vh" height="70vh">'
                     const newCommentText = document.createElement('div');
                     newCommentText.innerText = commentText;
-                    newCommentItem.insertBefore(newCommentName);
-                    newCommentItem.insertBefore(newCommentText);
-
+                    newCommentText.className = "comment-item-text";
+                    const newComment = document.createElement('div');
+                    newCommentItemInner.insertAdjacentElement('afterbegin', newCommentName);
+                    newCommentItemInner.insertAdjacentElement('beforeend', newCommentText);
+                    newCommentItem.insertAdjacentElement('beforeend', newCommentItemAva);
+                    newCommentItem.insertAdjacentElement('beforeend', newCommentItemInner);
+                    newComment.insertAdjacentElement('afterbegin', newCommentItemStars);
+                    newComment.insertAdjacentElement('beforeend', newCommentItem);
                     // Append to list
-                    commentList.insertBefore(newCommentItem);
+                    commentList.insertAdjacentElement('afterbegin', newComment);
 
                     // Clear input
+                    RefreshStars();
                     commentItemText.value = '';
                     commentItemName.value = '';
                 });
             </script>
-        </div>
     </section>
     <footer id="footer" class="footer">
         <div class="container">
-
+            <div class="footer-options">
+                <a class="footer-opt-item" href="@">ГЛАВНАЯ</a>
+                <a class="footer-opt-item" href="@">МАРШРУТЫ</a>
+                <a class="footer-opt-item" href="@">ОТЗЫВЫ</a>
+                <span class="footer-opt-item">Телефон: 8-800-55-35-35</span>
+            </div>
         </div>
     </footer>
 </body>

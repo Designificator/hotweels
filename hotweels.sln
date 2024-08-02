@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{7D103F19-68ED-47A1-BA09-2426C727468C}"
+	ProjectSection(SolutionItems) = preProject
+		Autorisation.html = Autorisation.html
+		Autorisation.js = Autorisation.js
+		autostyle.css = autostyle.css
+		CommentMaker.js = CommentMaker.js
+		Main.html = Main.html
+		Routs.html = Routs.html
+		routstyles.css = routstyles.css
+		styles.css = styles.css
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F025522-FF6C-4CDB-AEF6-E3EE99BC10FF}
+	EndGlobalSection
+EndGlobal
